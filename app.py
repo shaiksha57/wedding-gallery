@@ -175,7 +175,7 @@ def index():
 
 @app.route('/login', methods=['POST'])
 def login():
-    email = request.form.get('email', '').strip()
+    email = request.form.get('username', '').strip()
     password = request.form.get('password', '').strip()
     ip_address = request.remote_addr
 
