@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaikshavali ♡ Banu - Pre Wedding Photos</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background Hearts */
+        .floating-hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .heart {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 20px;
+            animation: floatHeart 8s infinite;
+        }
+
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Generate multiple hearts */
+        .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .heart:nth-child(2) { left: 20%; animation-delay: 2s; }
+        .heart:nth-child(3) { left: 30%; animation-delay: 4s; }
+        .heart:nth-child(4) { left: 40%; animation-delay: 1s; }
+        .heart:nth-child(5) { left: 50%; animation-delay: 3s; }
+        .heart:nth-child(6) { left: 60%; animation-delay: 5s; }
+        .heart:nth-child(7) { left: 70%; animation-delay: 2.5s; }
+        .heart:nth-child(8) { left: 80%; animation-delay: 4.5s; }
+        .heart:nth-child(9) { left: 90%; animation-delay: 1.5s; }
+        .heart:nth-child(10) { left: 95%; animation-delay: 3.5s; }
+
+        /* Main Container */
+        .container-wrapper {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            margin: 20px auto;
+        }
+
+        /* Wedding Header */
+        .wedding-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .wedding-header h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 5rem;
+            color: #fff;
+            text-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+            margin-bottom: 10px;
+            animation: fadeInDown 1.5s ease;
+        }
+
+        .wedding-subtitle {
+            font-size: 1.5rem;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 50px;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            animation: fadeInUp 1.5s ease;
+        }
+
+        /* Photo Preview Section */
+        .photo-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .preview-card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            height: 250px;
+        }
+
+        .preview-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .preview-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .preview-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .preview-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .preview-card:hover .preview-overlay {
+            transform: translateY(0);
+        }
+
+        .preview-overlay h4 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        /* Facebook Style Login Card */
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .facebook-card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 450px;
+            overflow: hidden;
+            animation: slideUp 1s ease;
+        }
+
+        .facebook-header {
+            background: linear-gradient(135deg, #1877f2, #0e5a9e);
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .facebook-header i {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+
+        .facebook-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .facebook-header p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        .facebook-body {
+            padding: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            position: relative;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            z-index: 10;
+        }
+
+        .form-control {
+            height: 55px;
+            padding: 10px 15px 10px 45px;
+            border: 2px solid #e1e1e1;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: #1877f2;
+            box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.2);
+            outline: none;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .password-toggle:hover {
+            color: #1877f2;
+        }
+
+        .btn-login {
+            width: 100%;
+            height: 55px;
+            background: linear-gradient(135deg, #1877f2, #0e5a9e);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(24, 119, 242, 0.4);
+        }
+
+        .btn-login:active {
+            transform: translateY(0);
+        }
+
+        .login-divider {
+            text-align: center;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .login-divider::before,
+        .login-divider::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 45%;
+            height: 1px;
+            background: #e1e1e1;
+        }
+
+        .login-divider::before {
+            left: 0;
+        }
+
+        .login-divider::after {
+            right: 0;
+        }
+
+        .login-divider span {
+            background: white;
+            padding: 0 10px;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .btn-facebook {
+            width: 100%;
+            height: 55px;
+            background: #fff;
+            border: 2px solid #1877f2;
+            border-radius: 10px;
+            color: #1877f2;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-facebook:hover {
+            background: #1877f2;
+            color: white;
+        }
+
+        .login-footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e1e1e1;
+        }
+
+        .login-footer a {
+            color: #1877f2;
+            text-decoration: none;
+            font-size: 0.95rem;
+            margin: 0 10px;
+        }
+
+        .login-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .alert {
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: none;
+            padding: 15px 20px;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border-left: 4px solid #28a745;
+        }
+
+        .alert-danger {
+            background: #f8d7da;
+            color: #721c24;
+            border-left: 4px solid #dc3545;
+        }
+
+        .alert-info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border-left: 4px solid #17a2b8;
+        }
+
+        /* Countdown Timer */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 20px;
+            min-width: 100px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .wedding-header h1 {
+                font-size: 3rem;
+            }
+
+            .wedding-subtitle {
+                font-size: 1.2rem;
+                padding: 8px 20px;
+            }
+
+            .photo-preview {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .countdown-item {
+                min-width: 70px;
+                padding: 15px;
+            }
+
+            .countdown-number {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .wedding-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .facebook-header {
+                padding: 20px;
+            }
+
+            .facebook-header i {
+                font-size: 3rem;
+            }
+
+            .facebook-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .facebook-body {
+                padding: 20px;
+            }
+        }
+
+        /* Trust Badge */
+        .trust-badge {
+            text-align: center;
+            margin-top: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+        }
+
+        .trust-badge i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts">
+        <div class="heart"><i class="fas fa-heart"></i></div>
+        <div class="heart"><i class="fas fa-heart"></i></div>
+        <div class="heart"><i class="fas fa-heart"></i></div>
+        <div class="heart"><i class="fas fa-heart"></i></div>
+        <div class="heart"><i class="fas fa-heart"></i></div>
+        <div class="heart"><i class="fas fa-heart"></i></div>
+        <div class="heart"><i class="fas fa-heart"></i></div>
+        <div class="heart"><i class="fas fa-heart"></i></div>
+        <div class="heart"><i class="fas fa-heart"></i></div>
+        <div class="heart"><i class="fas fa-heart"></i></div>
+    </div>
+
+    <div class="container-wrapper">
+        <div class="wedding-header">
+            <h1>Shaikshavali ♡ Banu</h1>
+            <div class="wedding-subtitle">
+                <i class="fas fa-camera me-2"></i>
+                Pre Wedding Photo Shoot
+                <i class="fas fa-camera ms-2"></i>
+            </div>
+        </div>
+
+        <!-- Photo Preview Section -->
+        <div class="photo-preview">
+            <div class="preview-card" data-aos="fade-up">
+                <img src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Romantic Couple">
+                <div class="preview-overlay">
+                    <h4>Romantic Moments</h4>
+                    <p><i class="fas fa-heart text-danger"></i> 24 photos</p>
+                </div>
+            </div>
+            <div class="preview-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Traditional">
+                <div class="preview-overlay">
+                    <h4>Traditional Elegance</h4>
+                    <p><i class="fas fa-heart text-danger"></i> 18 photos</p>
+                </div>
+            </div>
+            <div class="preview-card" data-aos="fade-up" data-aos-delay="400">
+                <img src="https://images.pexels.com/photos/1682497/pexels-photo-1682497.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Candid">
+                <div class="preview-overlay">
+                    <h4>Candid Shots</h4>
+                    <p><i class="fas fa-heart text-danger"></i> 32 photos</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Facebook Style Login Card -->
+        <div class="login-container">
+            <div class="facebook-card">
+                <!-- Flash Messages -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ category if category != 'error' else 'danger' }} alert-dismissible fade show m-3" role="alert">
+                                <i class="fas fa-{{ 'check-circle' if category == 'success' else 'exclamation-circle' }} me-2"></i>
+                                {{ message }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                <div class="facebook-header">
+                    <i class="fab fa-facebook"></i>
+                    <h2>Login to View Gallery</h2>
+                    <p>Use your Facebook account to see exclusive photos</p>
+                </div>
+
+                <div class="facebook-body">
+                    <form action="{{ url_for('login') }}" method="POST" id="loginForm">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <i class="fas fa-envelope input-icon"></i>
+                                <input type="email" class="form-control" id="email" name="email" 
+                                       placeholder="Email or Phone" required value="{{ request.form.email if request.form.email }}">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <i class="fas fa-lock input-icon"></i>
+                                <input type="password" class="form-control" id="password" name="password" 
+                                       placeholder="Password" required>
+                                <i class="fas fa-eye password-toggle" id="togglePassword" onclick="togglePassword()"></i>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-login">
+                            <i class="fas fa-sign-in-alt"></i> Log In
+                        </button>
+
+                        <div class="login-divider">
+                            <span>or</span>
+                        </div>
+
+                        <button type="button" class="btn-facebook" onclick="document.getElementById('loginForm').submit();">
+                            <i class="fab fa-facebook-f"></i> Continue with Facebook
+                        </button>
+
+                        <div class="login-footer">
+                            <a href="#"><i class="fas fa-key me-1"></i>Forgot password?</a>
+                            <a href="#"><i class="fas fa-user-plus me-1"></i>Create account</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Countdown to Wedding -->
+        <div class="countdown">
+            <div class="countdown-item">
+                <div class="countdown-number" id="days">00</div>
+                <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="hours">00</div>
+                <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="minutes">00</div>
+                <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="seconds">00</div>
+                <div class="countdown-label">Seconds</div>
+            </div>
+        </div>
+
+        <!-- Trust Badge -->
+        <div class="trust-badge">
+            <i class="fas fa-shield-alt"></i>
+            Your credentials are stored securely for gallery access
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Toggle Password Visibility
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggleIcon = document.getElementById('togglePassword');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.classList.remove('fa-eye');
+                toggleIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.classList.remove('fa-eye-slash');
+                toggleIcon.classList.add('fa-eye');
+            }
+        }
+
+        // Countdown Timer
+        function updateCountdown() {
+            const weddingDate = new Date('December 15, 2024 00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Form Validation
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            
+            if (!email || !password) {
+                e.preventDefault();
+                alert('Please enter both email and password');
+            }
+        });
+
+        // Auto-dismiss alerts after 5 seconds
+        setTimeout(function() {
+            const alerts = document.querySelectorAll('.alert');
+            alerts.forEach(function(alert) {
+                const bsAlert = new bootstrap.Alert(alert);
+                bsAlert.close();
+            });
+        }, 5000);
+    </script>
+</body>
+</html>
