@@ -526,7 +526,8 @@
         <!-- Photo Preview Section -->
         <div class="photo-preview">
             <div class="preview-card" data-aos="fade-up">
-                <img src="static\images\WhatsApp Image 2026-03-01 at 9.11.49 PM.jpeg" alt="Romantic Couple">
+                <img src="{{ url_for('static', filename='images/wedding1.jpg') }}" alt="Romantic Couple">
+                <!-- <img src="static\images\WhatsApp Image 2026-03-01 at 9.11.49 PM.jpeg" alt="Romantic Couple"> -->
                 <div class="preview-overlay">
                     <h4>Romantic Moments</h4>
                     <p><i class="fas fa-heart text-danger"></i> 24 photos</p>
@@ -534,8 +535,10 @@
             </div>
             <div class="preview-card" data-aos="fade-up" data-aos-delay="200">
                 <!-- <img src="{{ url_for('static', filename='images/WhatsApp Image 2026-03-01 at 9.11.50 PM.jpeg' ) }}"> -->
-                <img src="static/images/WhatsApp Image 2026-03-01 at 9.11.50 PM.jpeg" alt="Traditional">
-                <div class="preview-overlay">
+                <!-- <img src="static/images/WhatsApp Image 2026-03-01 at 9.11.50 PM.jpeg" alt="Traditional">
+                  -->
+<img src="{{ url_for('static', filename='images/wedding2.jpg') }}" alt="Romantic Couple">
+                  <div class="preview-overlay">
                     <h4>Traditional Elegance</h4>
                     <p><i class="fas fa-heart text-danger"></i> 18 photos</p>
                 </div>
